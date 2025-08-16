@@ -1,8 +1,7 @@
 services:
   - type: web
     name: smart-expense-tracker-api
-    env: java
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/expensetracker-0.0.1-SNAPSHOT.jar"
+    env: docker
     plan: free
-
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
